@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fashion.SecondUI"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:id="@+id/secondImage"
+            android:layout_width="72dp"
+            android:layout_height="96dp"
+            android:layout_margin="13dp"
+            android:src="@drawable/ic_secondimage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        
+        
+        
+        <TextView
+            android:id="@+id/secondtext"
+            android:layout_width="228dp"
+            android:layout_height="20dp"
+            android:text="The Joni High Rise Loose 29L"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@id/secondImage"
+            app:layout_constraintTop_toTopOf="@id/secondImage"
+            
+            />
+        
+        <TextView
+            android:id="@+id/secondColour"
+            android:layout_width="32dp"
+            android:layout_height="20dp"
+            android:textSize="13sp"
+            android:text="Black "
+            app:layout_constraintStart_toEndOf="@id/secondImage"
+            app:layout_constraintTop_toBottomOf="@id/secondtext"
+            />
+
+        <TextView
+            android:id="@+id/secondSize"
+            android:layout_width="179dp"
+            android:layout_height="20dp"
+            android:textSize="13sp"
+            android:text="  |   M"
+            app:layout_constraintStart_toEndOf="@id/secondColour"
+            app:layout_constraintTop_toBottomOf="@id/secondtext"
+            />
+        
+        <TextView
+            android:id="@+id/secondbutton"
+            android:layout_width="32dp"
+            android:layout_height="16dp"
+            android:textStyle="bold"
+            android:text="EDIT"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintStart_toEndOf="@id/secondImage"
+            app:layout_constraintTop_toBottomOf="@id/secondColour"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <ImageButton
+            android:id="@+id/circularButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click me"
+            android:src="@drawable/subtract"
+            android:layout_centerInParent="true"/>
+
+            
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

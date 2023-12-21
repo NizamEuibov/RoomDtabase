@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/fashionCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/fashionImage"
+            android:layout_width="148dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_fashion"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/nametext"
+            />
+
+
+        <TextView
+            android:id="@+id/nametext"
+            android:layout_width="136dp"
+            android:layout_height="40dp"
+            android:text="The Lola High Rise Skinny 30L"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fashionImage"
+            app:layout_constraintBottom_toTopOf="@id/pricetext"
+            />
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/currencytext"-->
+<!--            android:text="$"-->
+<!--            android:textSize="13sp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/nametext"-->
+<!--            />-->
+
+
+        <TextView
+            android:id="@+id/pricetext"
+            android:text="65.5"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nametext"
+            />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </com.google.android.material.card.MaterialCardView>
+
