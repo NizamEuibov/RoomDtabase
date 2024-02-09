@@ -27,7 +27,7 @@ class SimpleTaskAdapter( private val dataList:List<FashionDataClass>):RecyclerVi
     }
 
     class SimpleViewHolder(private val binding:ItemFashionViewPagerBinding):ViewHolder(binding.root) {
-        fun bind(data: FashionDataClass){
+        fun bind(data: FashionDataClass) {
             binding.fashionImage.setImageResource(data.image)
             binding.nametext.text=data.name
             binding.pricetext.text= data.price.toString()

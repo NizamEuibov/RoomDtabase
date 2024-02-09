@@ -49,9 +49,9 @@ class FirstUi : AppCompatActivity() {
         )
     )
 
-    companion object {
-        const val WOMEN = 1
-        const val MEN = 2
-        const val COUPLE = 3
-    }
+//    companion object {
+//        const val WOMEN = 1
+//        const val MEN = 2
+//        const val COUPLE = 3
+//    }
 }

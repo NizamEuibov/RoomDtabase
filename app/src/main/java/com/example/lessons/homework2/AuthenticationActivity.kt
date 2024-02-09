@@ -23,25 +23,31 @@ class AuthenticationActivity : AppCompatActivity() {
 
         }
     }
+private fun acceptIntent(){
 
+}
 
     private fun startActivity() {
-        val sharedPrefernce=getSharedPreferences("myPref", MODE_PRIVATE)
-        val editor=sharedPrefernce.edit()
+
         var intent=Intent(this, MainActivity::class.java)
         val email = binding?.edittextEmail?.text?.toString()
         val password = binding?.edittextPassword?.text?.toString()
-        val x=password?.length
+        val passwordLength=password?.length
+        val receiver=intent.getStringExtra("Email")
+        val receiver2=intent.getStringExtra("Password")
 
 
 
-        if (email!!.isNotEmpty() && password!!.isNotEmpty() && x!!>=8) {
+        if (email!!.isNotEmpty() && password!!.isNotEmpty() && passwordLength!!>=8)
+        if (email==receiver&& password==receiver2)
+        {
 
 //            editor.apply {
 //                putString("email",email)
 //                putString("password",password)
 //                apply()
 //            }
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 
 
              intent.putExtra("email",email)

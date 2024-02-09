@@ -16,6 +16,7 @@ class SignUpActivity : AppCompatActivity() {
 
         binding?.buttonsignup?.setOnClickListener{
             startActivity1()
+
         }
     }
 
@@ -25,15 +26,23 @@ class SignUpActivity : AppCompatActivity() {
         val birthday = binding?.edittext2?.text?.toString()
         val password=binding?.edittext3?.text?.toString()
         val password2=binding?.edittext4?.text?.toString()
-        val x=password?.length
+        val passowrdLength=password?.length
 
 
-        if ( email!!.isNotEmpty() && birthday!!.isNotEmpty() && password!!.isNotEmpty() && password2!!.isNotEmpty() && password==password2 && x!!>=8)
+        if ( email!!.isNotEmpty() && birthday!!.isNotEmpty() && password!!.isNotEmpty()
+            && password2!!.isNotEmpty() && password==password2 && passowrdLength!!>=8)
         {
-            startActivity(Intent(this, AuthenticationActivity::class.java))
+            startActivity(Intent(this, AuthenticationActivity::class.java).apply {
+                intent.putExtra("Email",email)
+                intent.putExtra("Password",password)
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            })
+
         }
 
         else Toast.makeText(this,
             "Enter correct information", Toast.LENGTH_LONG).show()
     }
+
 }
